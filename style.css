@@ -110,7 +110,7 @@ footer {width: 100%; position:fixed; bottom:0; left:0; padding: 20px 0;}
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {margin: 0 1%;}
   .champion {width: 14%;}
-  .split {width:100%%; }
+  .split {width:100%; }
   .split-one .vote-box {margin-left: 138px;}
 
 }

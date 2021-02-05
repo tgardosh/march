@@ -1,84 +1,117 @@
-body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg") no-repeat #000;background-size: cover;min-height: 100%;margin: 0;}
-.hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
-.hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}
-.hero p {font-family: 'Abel', sans-serif;text-transform: uppercase; color: #5CCA87; letter-spacing: 6px;text-shadow:0 0 12px rgba(0, 0, 0, 0.5);font-size: 1.2em;}
-.hero-wrap {padding: 3.5em 10px;}
-.hero p.intro {font-family: 'Holtwood One SC', serif;text-transform: uppercase;letter-spacing: 1px;font-size: 3em;margin-bottom:-40px;}
-.hero p.year {color: #fff; letter-spacing: 20px; font-size: 34px; margin: -25px 0 25px;}
-.hero p.year i {font-size: 14px;vertical-align: middle;}
-#bracket {overflow:hidden;background-color: #e1e1e1;background-color:rgba(225,225,225,0.9);padding-top: 20px;font-size: 12px;padding: 40px 0;}
-.container {max-width: 1100px;margin: 0 auto;display:block;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: -webkit-flex;display: flex;-webkit-flex-direction:row;flex-direction: row;}
-.split {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 42%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
-.champion {float:left;display:block;width: 16%;-webkit-flex-direction:row;flex-direction:row;-webkit-align-self:center;align-self:center;margin-top: -15px;text-align: center;padding: 230px 0\9;} 
-.champion i {color: #a0a6a8; font-size: 45px;padding: 10px 0; }
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+body {margin: 0;font-family: 'source sans pro', sans-serif;}
+
+/* Hero */
+header {width: 100%;text-align: center; margin:0 auto;padding:40px 0;}
+.logo {
+    display: block;
+    text-indent: -9999px;
+    width: 300px;
+    height: 132px;
+    background: url(logo-light.png) no-repeat;
+    background-size: 300px 132px;
+    margin:0 auto;
+  }
+
+.svglogo {width:300px; text-align: center; margin: 0 auto;padding:40px}
+
+
+footer {width: 100%; position:fixed; bottom:0; left:0; padding: 20px 0;}
+.share-wrap {max-width: 1140px; text-align: center; margin: 0 auto;}
+
+/* Bracket */
+#bracket {overflow:hidden;padding-top: 20px;padding: 40px 0;}
+
+.container {max-width: 1140px;margin: 0 auto;display:block;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: -webkit-flex;display: flex;-webkit-flex-direction:row;flex-direction: row;}
+
+.split {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 100%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
+
 .round {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:95%;width:30.8333%\9;}
 .split-one .round {margin: 0 2.5% 0 0;}
 .split-two .round {margin: 0 0 0 2.5%;}
-.matchup {margin:0;width: 100%;padding: 10px 0;height:60px;-webkit-transition: all 0.2s;transition: all 0.2s;}
-.score {font-size: 11px;text-transform: uppercase;float: right;color: #2C7399;font-weight: bold;font-family: 'Roboto Condensed', sans-serif;position: absolute;right: 5px;}
-.team {padding: 0 5px;margin: 3px 0;height: 25px; line-height: 25px;white-space: nowrap; overflow: hidden;position: relative;}
-.round-two .matchup {margin:0; height: 60px;padding: 50px 0;}
-.round-three .matchup {margin:0; height: 60px; padding: 130px 0;}
-.round-details {font-family: 'Roboto Condensed', sans-serif; font-size: 13px; color: #2C7399;text-transform: uppercase;text-align: center;height: 40px;}
-.champion li, .round li {background-color: #fff;box-shadow: none; opacity: 0.45;}
+.round-two .match {margin:0; padding: 50px 0;}
+.round-three .match {margin:0; padding: 130px 0;}
+.round-details {margin: 20px 0;font-family:Oswald; font-weight:500; text-align:center;text-transform:uppercase;font-size:16px;}
+
+.match {margin:0;padding: 10px 0;}
+.team {display: flex;align-items: center;width: 100%;height: 30px;}
+.team-top {margin-bottom: 2px;}
+.seed {width:5%;padding:0 3px;text-align:center;font-size: 10px;}
+.score {margin-left: auto; text-align:center; width:10%;font-size: 12px;}
+
+.champion {float:left;display:block;width: 16%;-webkit-flex-direction:row;flex-direction:row;-webkit-align-self:center;align-self:center;margin-top: -15px;text-align: center;padding: 230px 0\9;} 
+.champion i {padding: 10px 0; }
+.champion li, .round li {opacity: .5}
 .current li {opacity: 1;}
-.current li.team {background-color: #fff;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);opacity: 1;}
+
 .vote-options {display: block;height: 52px;}
-.share .container {margin: 0 auto; text-align: center;}
-.share-icon {font-size: 24px; color: #fff;padding: 25px;}
-.share-wrap {max-width: 1100px; text-align: center; margin: 60px auto;}
 .final {margin: 4.5em 0;}
 
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
+/* Theme */
+.theme-light {
+    background: #F8F2F3;}
+    .theme-light header {
+        color: #912154;
+        background-color:#FFFFFF; }
+    .theme-light header .logo {
+        background: url(logo-light.png) no-repeat;
+        background-size: 300px 132px;}
+    .theme-light footer {
+        color: #912154;
+        background-color:#FFFFFF; }
+    .theme-light .round-details {
+        color: #912154; }
+    .theme-light .team {
+        background: #FFFAFB;
+        border-color: #FBDBE5;
+        color: #A6597C; }
+    .theme-light .winner-top .team-top,
+    .theme-light .winner-bottom .team-bottom {
+        background: #fff;
+        color: #8A0F47;
+        border-color: #F1CAD6;
+        z-index: 1; }
+    .theme-light .match .seed {
+        opacity: .5; }
+    .theme-light .match .score {
+        opacity: .5; }
 
-  50% {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
+.theme-dark{
+    background: #120D13;}
+    .theme-dark header {
+        color: #912154;
+        background-color:#211523; }
+    .theme-dark header .logo {
+            background: url(logo-dark.png) no-repeat;
+            background-size: 300px 132px;}
+    .theme-dark footer {
+        color: #877884;
+        background-color:#211523; }
+    .theme-dark .round-details {
+        color: #877884; }
+    .theme-dark .team {
+        background: #211523;
+        border-color: #322235;
+        color: #877884; }
+    .theme-dark .winner-top .team-top,
+    .theme-dark .winner-bottom .team-bottom {
+        background: #402745;
+        color: #FEF4FB;
+        border-color: #56315C;
+        z-index: 1; }
+    .theme-dark .match .seed {
+        opacity: .5; }
+    .theme-dark .match .score {
+        opacity: .5; }
 
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  50% {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-.share-icon {color: #fff; opacity: 0.35; }
-.share-icon:hover { opacity:1;  -webkit-animation: pulse 0.5s; animation: pulse 0.5s;}
-.date {font-size: 10px; letter-spacing: 2px;font-family: 'Istok Web', sans-serif;color:#3F915F;}
-
-
-
+/* Media */
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {margin: 0 1%;}
   .champion {width: 14%;}
-  .split {width:43%; }
+  .split {width:100%%; }
   .split-one .vote-box {margin-left: 138px;}
-  .hero p.intro {font-size: 28px;}
-  .hero p.year {margin: 5px 0 10px;}
 
 }
 
@@ -86,22 +119,16 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/
   .container {-webkit-flex-direction:column;-moz-flex-direction:column;flex-direction:column;}
   .split, .champion {width: 90%;margin: 35px 5%;}
   .champion {-webkit-box-ordinal-group:3;-moz-box-ordinal-group:3;-ms-flex-order:3;-webkit-order:3;order:3;}
-  .split {border-bottom: 1px solid #b6b6b6; padding-bottom: 20px;}
-  .hero p.intro {font-size: 24px;}
-  .hero h1 {font-size: 3em; margin: 15px 0;}
-  .hero p {font-size: 1em;}
+  .split {padding-bottom: 20px;}
+  header h1 {font-size: 3em; margin: 15px 0;}
 }
 
 
 @media screen and (max-width: 400px) {
-
   .split {width: 95%;margin: 25px 2.5%;}
   .round {width:21%;}
   .current {-webkit-flex-grow:1;-moz-flex-grow:1;flex-grow:1;}
-  .hero h1 {font-size: 2.15em; letter-spacing: 0;margin:0; }
-  .hero p.intro {font-size: 1.15em;margin-bottom: -10px;}
+  header h1 {font-size: 2.15em; letter-spacing: 0;margin:0; }
   .round-details {font-size: 90%;}
-  .hero-wrap {padding: 2.5em;}
-  .hero p.year {margin: 5px 0 10px; font-size: 18px;}
-
+  footer {position: relative;}
 }

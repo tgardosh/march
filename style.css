@@ -122,9 +122,12 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
 .toggle-checkbox {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
     height: 0;
     width: 0;
+  }
+
+.toggle-slot:hover{
+  cursor: pointer;
   }
   
   .toggle-slot {

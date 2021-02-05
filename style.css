@@ -15,11 +15,8 @@ header {width: 100%;text-align: center; margin:0 auto;padding:40px 0;}
     margin:0 auto;
   }
 
-.svglogo {width:300px; text-align: center; margin: 0 auto;padding:40px}
-
-
-footer {width: 100%; position:fixed; bottom:0; left:0; padding: 20px 0;}
-.share-wrap {max-width: 1140px; text-align: center; margin: 0 auto;}
+footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
+.share-wrap {max-width: 1140px; text-align: center; margin: 0 auto; font-size:14px;}
 
 /* Bracket */
 #bracket {overflow:hidden;padding-top: 20px;padding: 40px 0;}

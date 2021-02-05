@@ -16,8 +16,17 @@ header {width: 100%;text-align: center; margin:0 auto;padding:40px 0;}
   }
 
 footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
-.footer-wrap {max-width: 1140px; text-align: center; margin: 0 auto; font-size:14px;}
+.footerwrap {max-width: 1140px; text-align: center; margin: 0 auto; font-size:14px;}
+.switch {margin-bottom:10px;}
 
+.footer-wrap{
+    padding: 10px 0;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 /* Bracket */
 #bracket {overflow:hidden;padding-top: 20px;padding: 40px 0;}
 
@@ -107,6 +116,92 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
         opacity: .5; }
     .theme-dark .match .score {
         opacity: .5; }
+
+/* Switch */
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .toggle-slot {
+    position: relative;
+    height: 30px;
+    width: 80px;
+    border: 2px solid #F8F2F3;
+    border-radius: 50px;
+    background-color: #FBF8F9;
+    transition: background-color 250ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #211523;
+    border-color: #322235;
+  }
+  
+  .toggle-button {
+    transform: translate(51px, 3px);
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: inset 0px 0px 0px 2px #F1CAD6;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #301E33;
+    box-shadow: inset 0px 0px 0px 2px #56315C;
+    transform: translate(4px, 3px);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    color: #D5538E;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    opacity: 1;
+    transform: translate(8px, 5px) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(53px, 5px) rotate(0deg);
+  }
+  
+  .moon-icon {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    color: #968493;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    opacity: 0;
+    transform: translate(8px, 4px) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,1.9,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(53px, 4px) rotate(-15deg);
+  }
 
 /* Media */
 @media screen and (min-width: 981px) and (max-width: 1099px) {

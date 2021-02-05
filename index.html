@@ -2,6 +2,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='style.css' rel='stylesheet'>
     
@@ -50,7 +52,7 @@
             <ul class="match">
                 <li class="team team-top">
                     <span class="seed">3</span>
-                    <span class="name">Pretty In Pink</span>
+                    <span class="name">Pretty in Pink</span>
                     <span class="score">&nbsp;</span>
                 </li>
                 <li class="team team-bottom">
@@ -125,7 +127,41 @@
 
     <footer>
         <div class="footer-wrap">
-            <p>©2021 netflix and chat™</p>
+            <div class="switch">
+                <label>
+                    <input class='toggle-checkbox' type='checkbox' id="lightSwitch"></input>
+                    <div class='toggle-slot'>
+                        <div class='sun-icon-wrapper'>
+                        <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                        </div>
+                        <div class='toggle-button'></div>
+                        <div class='moon-icon-wrapper'>
+                        <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <span>©2021 netflix and chat™</span>
         </div>
     </footer>
 </body>
+<script>
+
+// For the theme switcher
+
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                console.log("Checkbox is checked.");
+                $('.theme').removeClass('theme-light');
+                $('.theme').addClass('theme-dark');
+            }
+            else if($(this).prop("checked") == false){
+                console.log("Checkbox is unchecked.");
+                $('.theme').addClass('theme-light');
+		        $('.theme').removeClass('theme-dark');
+            }
+        });
+    });
+
+</script>

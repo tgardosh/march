@@ -10,10 +10,19 @@ header {width: 100%;text-align: center; margin:0 auto;padding:40px 0;}
     text-indent: -9999px;
     width: 300px;
     height: 132px;
-    background: url(logo-light.png) no-repeat;
+    background: url(logo-dark.png) no-repeat;
     background-size: 300px 132px;
     margin:0 auto;
+    animation: hue 3s infinite alternate ease-in-out;
   }
+
+.logo:hover {
+  animation: invert 3s infinite alternate ease-in-out;
+}
+
+@keyframes invert{0%{filter:invert(1)}100%{filter:invert(.5)}}
+
+@keyframes hue{0%{filter:hue-rotate(-20deg)}100%{filter:hue-rotate(20deg)}}
 
 footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
 .footerwrap {max-width: 1140px; text-align: center; margin: 0 auto; font-size:14px;}
@@ -67,8 +76,8 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
         color: #912154;
         background-color:#FFFFFF; }
     .theme-light header .logo {
-        background: url(logo-light.png) no-repeat;
-        background-size: 300px 132px;}
+        filter:hue-rotate(20deg);
+        opacity: 1; }
     .theme-light footer {
         color: #912154;
         background-color:#FFFFFF; }
@@ -95,8 +104,7 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
         color: #912154;
         background-color:#211523; }
     .theme-dark header .logo {
-            background: url(logo-dark.png) no-repeat;
-            background-size: 300px 132px;}
+            opacity: .8; }
     .theme-dark footer {
         color: #877884;
         background-color:#211523; }
@@ -136,7 +144,7 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
     width: 80px;
     border: 2px solid #F8F2F3;
     border-radius: 50px;
-    background-color: #FBF8F9;
+    background-color: #FFFAFB;
     transition: background-color 250ms;
   }
   

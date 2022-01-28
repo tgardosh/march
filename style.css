@@ -43,7 +43,7 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
 
 .split {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 100%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
 
-.round {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:95%;width:30.8333%\9;}
+.round {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:30%;}
 .split-one .round {margin: 0 2.5% 0 0;}
 .split-two .round {margin: 0 0 0 2.5%;}
 .round-two .match {margin:0; padding: 50px 0;}
@@ -235,7 +235,7 @@ footer {position:fixed; bottom:0; left:0;  width: 100%; padding: 10px 0;}
 
 
 @media screen and (max-width: 400px) {
-  .split {width: 95%;margin: 25px 2.5%;}
+  .split {width: 30%;margin: 25px 2.5%;}
   .round {width:21%;}
   .name {font-size:12px;}
   .current {-webkit-flex-grow:1;-moz-flex-grow:1;flex-grow:1;}
